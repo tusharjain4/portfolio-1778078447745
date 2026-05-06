@@ -1,0 +1,105 @@
+{
+  "name": "Pooja R. Sonar",
+  "role": "Software Developer",
+  "tagline": "Full-stack Software Developer specializing in high-performance real-time systems, the MERN stack, and AI-driven web applications.",
+  "about": "Pooja R. Sonar is an accomplished Software Developer with extensive experience in building scalable, real-time web applications. Her full-stack expertise encompasses technologies such as Next.js, React, Node.js, and the MERN stack. Pooja excels at designing and implementing high-performance systems, including real-time telemetry platforms that boast high uptime and ultra-low latency, integrating robust messaging queues like RabbitMQ, and developing innovative AI-powered solutions. She is also adept at crafting intuitive user interfaces, secure authentication systems, and seamless API integrations.",
+  "experience": 1.3,
+  "currentRole": "Software Developer at InnoFarms.AI",
+  "highlights": [
+    "Architected real-time telemetry (10K+ readings/min) via Cosmos DB and Node.js, achieving 99.9% uptime and <100ms UI latency.",
+    "Built scalable web applications and dashboards using Next.js, TypeScript, and MERN stack for optimal front-end performance.",
+    "Implemented robust real-time communication (Socket.IO, MQTT, SSE, RabbitMQ) and secure authentication mechanisms (email/OTP, Google sign-in).",
+    "Developed an AI-powered, gamified coding preparation platform leveraging Gemini's API for educational content and coding challenges."
+  ],
+  "skills": [
+    {
+      "name": "Languages",
+      "skills": [
+        "TypeScript",
+        "JavaScript",
+        "Java",
+        "C++",
+        "SQL"
+      ]
+    },
+    {
+      "name": "Core CS",
+      "skills": [
+        "Data Structures & Algorithms",
+        "Object-Oriented Programming"
+      ]
+    },
+    {
+      "name": "Frontend",
+      "skills": [
+        "React",
+        "Next.js",
+        "Redux",
+        "Tailwind CSS",
+        "MUI"
+      ]
+    },
+    {
+      "name": "Backend",
+      "skills": [
+        "Node.js",
+        "Express",
+        "Java",
+        "Spring",
+        "REST APIs"
+      ]
+    },
+    {
+      "name": "Realtime",
+      "skills": [
+        "WebSockets",
+        "Socket.IO",
+        "MQTT",
+        "SSE",
+        "RabbitMQ"
+      ]
+    },
+    {
+      "name": "Cloud",
+      "skills": [
+        "Azure (Container Apps, Cosmos DB)",
+        "MongoDB"
+      ]
+    },
+    {
+      "name": "Tools",
+      "skills": [
+        "Git/GitHub",
+        "Postman",
+        "Storybook"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "AccessAI - CodeQuest (MERN)",
+      "description": "Engineered an innovative AI-powered, gamified coding preparation platform designed to enhance user learning across various programming languages and frameworks, including Solidity, JavaScript, CSS, and React. This platform provides engaging educational content, dynamic coding challenges, and real-time AI-driven assistance powered by Gemini's API.",
+      "tech": [
+        "MERN Stack (MongoDB, Express, React, Node.js)",
+        "Solidity",
+        "JavaScript",
+        "CSS",
+        "Gemini API"
+      ]
+    },
+    {
+      "name": "Chess.com Backend Clone (MERN)",
+      "description": "Developed a robust, full-fledged backend system using the MERN stack to meticulously replicate core chess gameplay mechanics. Leveraged Socket.IO WebSockets, including advanced features like rooms, namespaces, heartbeats, and seamless reconnection logic, to synchronize moves, clocks, resignations, and draws in real time. Designed and implemented secure RESTful Express APIs for user management, game states, move processing, and session handling, complete with JWT authentication (access and refresh tokens), Role-Based Access Control (RBAC), rate limiting, and CORS configuration.",
+      "tech": [
+        "MERN Stack (MongoDB, Express, React, Node.js)",
+        "Socket.IO",
+        "JWT"
+      ]
+    }
+  ],
+  "contact": {
+    "email": "poojasonar671@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/poojasonar",
+    "github": "https://github.com/poojasonar"
+  }
+}
