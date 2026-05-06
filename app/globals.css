@@ -1,0 +1,335 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Google Fonts are imported in layout.tsx via next/font/google */
+
+:root {
+  /* Theme Colors (clean-light) */
+  --color-primary: #0071E3;
+  --color-secondary: #86868B;
+  --color-background: #FFFFFF;
+  --color-text: #1D1D1F;
+  --color-accent: #2997FF;
+  --color-white: #FFFFFF;
+  --color-page-background: #E2E2E2;
+  --color-border: #E5E5E5;
+
+  /* Template CSS specific colors, mapped to theme or custom */
+  --template-dark-blue: #0071E3; /* Mapped from #21279d to theme primary */
+  --template-light-gray-border: #E5E5E5; /* Mapped from #d7d7d7 to theme border */
+  --template-bg-light-gray: #F2F2F2; /* Custom, from #f1f1f1, #f2f2f2 */
+}
+
+/* Base styles matching template and theme mood */
+body {
+  @apply font-body bg-background text-text overflow-x-hidden;
+}
+
+img {
+  @apply max-w-full h-auto block;
+}
+
+/* Layout components */
+.header-container {
+  @apply w-full bg-white border-b border-text overflow-x-auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.header-content {
+  @apply w-full max-w-layout-max-width mx-auto flex justify-between items-center px-4 py-1.5 sm:px-6 lg:px-12; /* Adjusted padding */
+}
+
+.logo-section {
+  @apply flex gap-2 items-center;
+}
+
+.logo-text {
+  @apply text-xl sm:text-4xl font-source-serif-4 font-semibold leading-[58px] text-text; /* Adjusted text-xl from 28px for responsive scale */
+}
+
+.logo-divider {
+  @apply w-px h-[30px] bg-border;
+}
+
+.logo-icon {
+  @apply w-[26px] h-[28px];
+}
+
+.nav-menu {
+  @apply hidden gap-6 items-center lg:flex; /* Initially hidden, visible on large screens */
+}
+
+.nav-menu button {
+  @apply text-lg sm:text-2xl font-dot-gothic-16 font-normal leading-[41px] text-text bg-transparent border-none cursor-pointer transition-colors duration-300; /* Adjusted text-lg from 18px */
+}
+
+.nav-menu button:hover {
+  @apply text-primary;
+}
+
+.hamburger {
+  @apply block bg-transparent border-none text-2xl cursor-pointer lg:hidden; /* Visible on small screens, hidden on large */
+}
+
+.main-container {
+  @apply w-full px-4 sm:px-6 lg:px-12;
+}
+
+.content-wrapper {
+  @apply w-full max-w-layout-max-width mx-auto;
+}
+
+/* Hero Section */
+.hero-section {
+  @apply py-6 sm:py-6 lg:py-12 w-full min-h-[--hero-min-height]; /* Added min-height from theme */
+}
+
+.hero-content {
+  @apply flex flex-col gap-4 w-full md:flex-row md:gap-7; /* Adjusted gap, changed to row on medium */
+}
+
+.hero-left {
+  @apply relative w-full mb-16 md:w-[60%] md:mb-32; /* Adjusted mb-16 from 62px */
+}
+
+.hero-text-container {
+  @apply flex flex-col;
+}
+
+.hero-hello {
+  @apply text-hero-title-mobile sm:text-hero-title-sm md:text-hero-title-md lg:text-hero-title-lg font-dot-gothic-16 font-normal leading-hero-title-line-height text-text;
+}
+
+.hero-im {
+  @apply text-hero-title-mobile sm:text-hero-title-sm md:text-hero-title-md lg:text-hero-title-lg font-dot-gothic-16 font-normal leading-hero-title-line-height text-center text-text -mt-8 ml-3 w-[28%]; /* Adjusted -mt from -33px */
+}
+
+.scroll-text {
+  @apply text-xl sm:text-3xl lg:text-4xl font-dot-gothic-16 font-normal leading-[46px] underline text-text w-full mt-4 lg:w-[20%]; /* Adjusted text-xl from 20px */
+}
+
+.hero-image {
+  @apply w-full max-w-[522px] h-auto mt-4 mx-auto;
+}
+
+.hero-right {
+  @apply flex flex-col gap-6 w-full mt-4 md:w-[38%] md:mt-8; /* Adjusted gap and mt */
+}
+
+.title-stack {
+  @apply relative w-full;
+}
+
+.title-bg-top {
+  @apply w-40 h-10 bg-primary rounded-[30px] mt-1.5 ml-7 sm:w-60 sm:h-16 lg:w-[300px] lg:h-[78px] lg:mt-2.5 lg:ml-[54px]; /* Adjusted sizes, colors and positions */
+}
+
+.title-text-container {
+  @apply flex flex-col;
+}
+
+.title-product {
+  @apply text-2xl sm:text-5xl lg:text-6xl font-dot-gothic-16 font-normal leading-[95px] text-white ml-12; /* Adjusted text-2xl from 33px, margin-left */
+}
+
+.title-designer-section {
+  @apply flex flex-col items-end -mt-3;
+}
+
+.title-designer {
+  @apply text-2xl sm:text-5xl lg:text-6xl font-dot-gothic-16 font-normal leading-[95px] text-white mr-8; /* Adjusted text-2xl from 33px, margin-right */
+}
+
+.title-name {
+  @apply text-hero-title-mobile sm:text-hero-title-sm md:text-hero-title-md lg:text-hero-title-lg font-dot-gothic-16 font-normal leading-hero-title-line-height text-center text-text w-full -mt-2.5; /* Adjusted -mt from -10px */
+}
+
+.title-bg-bottom {
+  @apply w-44 h-10 bg-primary rounded-[30px] mt-10 mr-3 sm:w-[266px] sm:h-[62px] lg:w-[332px] lg:h-[78px] lg:mt-[84px] lg:mr-6; /* Adjusted sizes, colors and positions */
+}
+
+.hero-description {
+  @apply text-base sm:text-lg lg:text-2xl font-manrope font-normal leading-7 text-justify text-text w-full; /* Adjusted text-base from 16px */
+}
+
+/* Works Section */
+.works-section {
+  @apply border-b border-text bg-white py-12 sm:py-12 lg:py-24; /* Adjusted padding */
+}
+
+.works-content {
+  @apply flex flex-col gap-4 w-full mt-4 sm:gap-7; /* Adjusted gap and mt */
+}
+
+.works-title {
+  @apply text-2xl sm:text-3xl lg:text-4xl font-dot-gothic-16 font-normal leading-[57px] text-text; /* Adjusted text-2xl from 28px */
+}
+
+.project-item {
+  @apply border-t border-border py-4 flex flex-col gap-4 md:flex-row md:justify-between md:py-8; /* Adjusted padding and gap, changed to row on medium */
+}
+
+.project-info {
+  @apply flex flex-col gap-3 md:w-[35%];
+}
+
+.project-title {
+  @apply text-lg sm:text-xl lg:text-2xl font-manrope font-semibold leading-[33px] tracking-[4px] uppercase text-text; /* Adjusted text-lg from 18px */
+}
+
+.project-keywords {
+  @apply flex flex-col gap-1.5 md:flex-row md:flex-wrap md:gap-x-2 md:gap-y-1; /* Changed to row and wrap for keywords */
+}
+
+.keyword {
+  @apply text-xs sm:text-sm font-manrope font-semibold leading-5 tracking-[2px] uppercase text-text; /* Adjusted text-xs from 12px */
+}
+
+.project-description {
+  @apply text-sm sm:text-base font-manrope font-normal leading-6 text-text mt-2;
+}
+
+.project-image {
+  @apply w-full h-auto self-center md:w-[62%];
+}
+
+/* Skills Section */
+.skills-section {
+  @apply border-b border-text bg-white py-12 sm:py-12 lg:py-24; /* Adjusted padding */
+}
+
+.skills-content {
+  @apply flex flex-col gap-4;
+}
+
+.skills-title {
+  @apply text-2xl sm:text-3xl lg:text-4xl font-dot-gothic-16 font-normal leading-[57px] text-text mt-0.5; /* Adjusted text-2xl from 28px */
+}
+
+.skills-grid {
+  @apply grid grid-cols-1 gap-4 w-full sm:grid-cols-2 sm:gap-5 lg:ml-[316px]; /* Adjusted gap, columns and margin-left on large */
+}
+
+.skill-card {
+  @apply flex flex-col gap-3;
+}
+
+.skill-icon {
+  @apply w-[68px] h-[68px] bg-template-bg-light-gray rounded-full p-2.5 flex items-center justify-center;
+}
+
+.skill-icon img {
+  @apply w-full h-full;
+}
+
+.skill-info {
+  @apply flex flex-col gap-1.5;
+}
+
+.skill-name {
+  @apply text-lg sm:text-xl lg:text-2xl font-manrope font-bold leading-[33px] text-justify text-text; /* Adjusted text-lg from 18px */
+}
+
+.skill-description {
+  @apply text-sm sm:text-base font-manrope font-normal leading-5 text-justify text-text; /* Adjusted text-sm from 14px */
+}
+
+/* Journey Section (renamed to About & Journey in components) */
+.journey-section {
+  @apply border-b border-text bg-white py-12 sm:py-12 lg:py-24; /* Adjusted padding */
+}
+
+.journey-content {
+  @apply flex flex-col gap-4;
+}
+
+.journey-title {
+  @apply text-2xl sm:text-3xl lg:text-4xl font-dot-gothic-16 font-normal leading-[57px] text-text mt-0.5; /* Adjusted text-2xl from 28px */
+}
+
+.journey-list {
+  @apply flex flex-col gap-2.5 w-full lg:ml-[316px] lg:gap-5; /* Adjusted gap and margin-left on large */
+}
+
+.journey-item {
+  @apply border border-text bg-white p-3 flex flex-col gap-2 sm:p-6 sm:gap-4; /* Adjusted padding and gap */
+}
+
+.journey-header {
+  @apply flex gap-1.5 items-center sm:gap-3;
+}
+
+.journey-icon {
+  @apply w-12 h-12 bg-template-bg-light-gray rounded-full p-2.5 flex items-center justify-center flex-shrink-0;
+}
+
+.journey-icon img {
+  @apply w-full h-full;
+}
+
+.journey-info {
+  @apply flex flex-col flex-1;
+}
+
+.journey-institution {
+  @apply text-xs sm:text-sm font-archivo font-extrabold leading-[17px] text-text; /* Adjusted text-xs from 13px */
+}
+
+.journey-period {
+  @apply text-xs sm:text-sm font-archivo font-normal leading-[17px] text-text; /* Adjusted text-xs from 13px */
+}
+
+.journey-details {
+  @apply flex gap-1.5 items-start sm:gap-3;
+}
+
+.journey-line {
+  @apply w-12 h-auto flex-shrink-0; /* Height adjusted to auto as the SVG is dynamic */
+}
+
+.journey-description {
+  @apply text-base sm:text-lg lg:text-xl font-archivo font-normal leading-6 sm:leading-6 lg:leading-7 text-text flex-1; /* Adjusted text-base from 16px */
+}
+
+/* Footer */
+.footer-section {
+  @apply bg-white py-3 sm:py-3 lg:py-1; /* Adjusted padding */
+}
+
+.footer-content {
+  @apply flex flex-col gap-3 w-full;
+}
+
+.footer-top {
+  @apply flex flex-col gap-3 items-center mt-9 md:flex-row md:justify-between md:items-end; /* Adjusted gap and mt */
+}
+
+.footer-copyright {
+  @apply text-lg sm:text-2xl lg:text-3xl font-dot-gothic-16 font-normal leading-[41px] text-text text-center md:text-left; /* Adjusted text-lg from 18px */
+}
+
+.footer-email {
+  @apply text-base sm:text-lg lg:text-xl font-archivo-narrow font-medium leading-7 text-text border border-text px-6 py-2 bg-transparent cursor-pointer transition-all duration-300 hover:bg-text hover:text-white; /* Adjusted text-base from 16px */
+}
+
+.social-links {
+  @apply flex gap-4 mt-4 md:mt-0;
+}
+
+.social-link {
+  @apply text-text hover:text-primary transition-colors duration-300 text-2xl;
+}
+
+.footer-pattern {
+  @apply w-full h-auto;
+}
+
+/* Interactive states */
+button:focus {
+  @apply outline outline-2 outline-offset-2 outline-primary;
+}
+
+button:active {
+  transform: scale(0.98);
+}
